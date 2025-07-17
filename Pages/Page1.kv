@@ -1,0 +1,53 @@
+<Page1>:
+    name: "Page1"
+    FitImage:
+        source:"Font.jpeg"
+        size_hint:1,1
+    MDCard:
+        pos_hint:{"center_x":.5,"center_y":.5}
+        size_hint:.9,.9
+        opacity:0.7
+        md_bg_color: [1,1,1,1]
+    MDScreen:
+        MDLabel:
+            text: "Connectez vous !!!"
+            font_style:"H4"
+            pos_hint:{"center_y":.7}
+            halign:"center"
+            theme_text_color:"Custom"
+            text_color:[0,0,0,1]
+            bold:True
+        MDTextField:
+            id:Ident
+            mode:"rectangle"
+            hint_text:"Identifiant"
+            helper_text:"Ça peut aussi etre votre nom"
+            helper_text_mode:"on_focus"
+            size_hint_x:0.8
+            pos_hint:{"center_x":.5,"center_y":.6}
+            bold:True
+            icon_right:"badge-account"
+            halign:"center"
+        MDTextField:
+            id:Pass
+            mode:"rectangle"
+            hint_text:"Mode de pass"
+            helper_text:"Pas moins de 8"
+            helper_text_mode:"on_focus"
+            size_hint_x:0.8
+            password:True
+            pos_hint:{"center_x":.5,"center_y":.48}
+            bold:True
+            icon_right:"lock"
+            halign:"center"
+        
+        MDFlatButton:
+            text:"[b]Creer un Compe[/b]"
+            pos_hint:{"center_x":.5,"center_y":.38}
+            on_release:app.Next_Button(self)
+        
+        MDRaisedButton:
+            text:"[b]Valider[/b]"
+            pos_hint:{"center_x":.5,"center_y":.28}
+            size_hint_x:.5
+            on_release:app.Go(self)

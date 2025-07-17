@@ -1,0 +1,30 @@
+<Page4>:
+    name:"Page4"
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title:"Generer"
+            left_action_items:[["arrow-left",lambda x : app.back_Button(x)]]
+        Widget:
+    MDScreen:
+        MDTextField:
+            pos_hint:{"center_x":.45,"center_y":.55}
+            id:Genere
+            hint_text:"Code generé"
+            text:"Code"
+            mode:"rectangle"
+            icon_right:"eye"
+            readonly:True
+            size_hint_x:.7
+            halign:"center"
+        MDIconButton:
+            pos_hint:{"center_x":.9,"center_y":.55}
+            icon:"content-copy"
+            on_release:app.Copy(self)
+            
+        MDRaisedButton:
+            pos_hint:{"center_x":.5,"center_y":.4}
+            id:But_Generer
+            text:"[b]Generer[/b]"
+            size_hint_x:.5
+            on_release:app.Genere_code(self)

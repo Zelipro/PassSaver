@@ -1,0 +1,60 @@
+<Page2>:
+    name:"Page2"
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title:"Creation de Compte"
+            left_action_items:[["arrow-left",lambda x : app.back_Button(x)]]
+        MDScreen:
+            MDLabel:
+                text: "Hello , Bienvenue dans PassSaver"
+                font_style:"H5"
+                pos_hint:{"center_y":.8}
+                halign:"center"
+                theme_text_color:"Custom"
+                text_color:[0,0,0,1]
+                bold:True
+
+            MDTextField:
+                id:Ident2
+                mode:"rectangle"
+                hint_text:"Identifiant"
+                helper_text:"Ça peut aussi etre votre nom"
+                helper_text_mode:"on_focus"
+                size_hint_x:0.8
+                pos_hint:{"center_x":.5,"center_y":.7}
+                bold:True
+                icon_right:"badge-account"
+                halign:"center"
+
+            MDTextField:
+                id:Pass1
+                mode:"rectangle"
+                hint_text:"Mode de pass"
+                helper_text:"Pas moins de 8"
+                helper_text_mode:"on_focus"
+                size_hint_x:0.8
+                password:True
+                pos_hint:{"center_x":.5,"center_y":.58}
+                bold:True
+                icon_right:"lock"
+                halign:"center"
+            
+            MDTextField:
+                id:Pass2
+                mode:"rectangle"
+                hint_text:"Verification du pass"
+                helper_text:"Pas moins de 8"
+                helper_text_mode:"on_focus"
+                size_hint_x:0.8
+                password:True
+                pos_hint:{"center_x":.5,"center_y":.46}
+                bold:True
+                icon_right:"lock"
+                halign:"center"
+            
+            MDRaisedButton:
+                text:"[b]Valider[/b]"
+                pos_hint:{"center_x":.5,"center_y":.32}
+                size_hint_x:.5
+                on_release:app.Connecter(self)

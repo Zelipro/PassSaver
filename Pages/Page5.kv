@@ -1,0 +1,42 @@
+<Page5>:
+    name:"Page5"
+    MDBoxLayout:
+        orientation:"vertical"
+        MDTopAppBar:
+            title:"Ajouter"
+            left_action_items:[["arrow-left",lambda x : app.back_Button(x)]]
+        Widget:
+    MDScreen:
+        MDTextField:
+            id:Motif
+            hint_text:"Motif"
+            helper_text:"exemple : Google"
+            helper_text_mode:"on_focus"
+            mode:"rectangle"
+            halign:"center"
+            pos_hint:{"center_x":.5,"center_y":.7}
+            size_hint_x:.7
+        MDTextField:
+            id:Ident
+            hint_text:"Identifiant"
+            helper_text:"exemple : eliseeatikpo@gmail.com"
+            helper_text_mode:"on_focus"
+            mode:"rectangle"
+            halign:"center"
+            pos_hint:{"center_x":.5,"center_y":.55}
+            size_hint_x:.7
+        MDTextField:
+            id:Pass
+            hint_text:"Mot de pass"
+            helper_text:"exemple : ********"
+            helper_text_mode:"on_focus"
+            mode:"rectangle"
+            password:True
+            halign:"center"
+            pos_hint:{"center_x":.5,"center_y":.4}
+            size_hint_x:.7
+        MDRaisedButton:
+            text:"[b]Valider[/b]"
+            pos_hint:{"center_x":.5,"center_y":.25}
+            size_hint_x:.5
+            on_release:app.Save(self)

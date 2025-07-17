@@ -1,0 +1,25 @@
+<Page3>:
+    name:"Page3"
+    MDBoxLayout:
+        orientation:"vertical"
+        MDTopAppBar:
+            title:"Voie de service"
+            left_action_items:[["arrow-left",lambda x : app.back_Button(x,1)]]
+        Widget:
+    MDScreen:
+        MDRaisedButton:
+            text:"[b]Generer[/b]"
+            pos_hint:{"center_y":.7,"center_x":.5}
+            size_hint_x:.5
+            on_release:app.Next_Button(self,4)
+        MDRaisedButton:
+            text:'[b]Voire[/b]'
+            pos_hint:{"center_y":.6,"center_x":.5}
+            size_hint_x:.5
+            on_release:app.Page7_(self)
+        MDRaisedButton:
+            text:"[b]Ajouter[/b]"
+            pos_hint:{"center_y":.5,"center_x":.5}
+            size_hint_x:.5
+            on_release:app.Next_Button(self,5)
+    

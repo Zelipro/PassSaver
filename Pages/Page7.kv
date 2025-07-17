@@ -1,0 +1,37 @@
+<Page7>:
+    name:"Page7"
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            id:Top_Page8
+            left_action_items:[["arrow-left",lambda x : app.back_Button(x)]]
+        MDScreen:
+            MDTextField:
+                pos_hint:{"center_x":.45,"center_y":.8}
+                id:ident
+                hint_text:"Identifiant"
+                text:"Code"
+                mode:"rectangle"
+                icon_right:"eye"
+                readonly:True
+                size_hint_x:.7
+                halign:"center"
+            MDIconButton:
+                pos_hint:{"center_x":.9,"center_y":.8}
+                icon:"content-copy"
+                on_release:app.Copy_8_1(self)
+            
+            MDTextField:
+                pos_hint:{"center_x":.45,"center_y":.65}
+                id:pass_Page8
+                hint_text:"Password"
+                text:"Code"
+                mode:"rectangle"
+                icon_right:"eye"
+                readonly:True
+                size_hint_x:.7
+                halign:"center"
+            MDIconButton:
+                pos_hint:{"center_x":.9,"center_y":.65}
+                icon:"content-copy"
+                on_release:app.Copy_8(self)
