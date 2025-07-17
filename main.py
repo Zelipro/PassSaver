@@ -17,7 +17,7 @@ import sqlite3
 from kivy.clock import Clock
 from kivy.core.clipboard import Clipboard
 from random import choices
-Window.size = [360,600]
+#Window.size = [360,600]
 
 for i in range(1,8):
     Builder.load_file(f"Pages/Page{str(i)}.kv")
