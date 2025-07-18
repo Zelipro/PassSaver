@@ -3,11 +3,11 @@ title = PassSaver
 package.name = Zelipro_PassSaver
 package.domain = org.example_PageSaver
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas,txt,jpeg,db
-source.include_patterns = Pages/*,*.db,*.jpeg,*.jpg,*.png
+source.include_exts = py,png,jpg,kv,atlas,txt,jpeg,db,svg
+source.include_patterns = Pages/*,*.db,*.jpeg,*.jpg,*.png,*.svg
 version = 1.0
 requirements = python3,kivy,kivymd,pillow
-icon.filename = %(source.dir)s/Logo.png
+icon.filename = %(source.dir)s/Logo.svg
 
 # Permissions Android
 android.permissions = INTERNET,CALL_PHONE,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
