@@ -7,7 +7,7 @@ source.include_exts = py,png,jpg,kv,atlas,txt,jpeg,db,svg
 source.include_patterns = Pages/*,*.db,*.jpeg,*.jpg,*.png,*.svg
 version = 1.0
 requirements = python3,kivy,kivymd,pillow
-icon.filename = %(source.dir)s/Logo.svg
+icon.filename = %(source.dir)s/Font.svg
 
 # Permissions Android
 android.permissions = INTERNET,CALL_PHONE,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
