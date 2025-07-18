@@ -10,38 +10,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      
-      - name: Install Buildozer
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openjdk-8-jdk
-          pip install buildozer cython
-      
-      - name: Build with Buildozer (logs optimisés)
+      - name: Build with Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
-        run: |
-          echo "::group::Building APK"
-          buildozer android debug > build.log 2>&1
-          echo "::endgroup::"
-          echo "Build terminé - Dernières lignes :"
-          tail -n 50 build.log
-          echo "Fichiers générés :"
-          ls -la bin/ || echo "Dossier bin/ non trouvé"
+        with:
+          workdir: .
+          buildozer_version: stable
+          # Rediriger les logs pour éviter le dépassement
+          command: |
+            echo "::group::Building APK"
+            buildozer android debug 2>&1 | tail -n 1000
+            echo "::endgroup::"
+            echo "Build terminé"
+            ls -la bin/
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: package
-          path: bin/*.apk
+          path: ${{ steps.buildozer.outputs.filename }}
       
-      # Upload des logs complets pour debug
+      # Optionnel : Upload des logs complets si nécessaire
       - name: Upload build logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: build-logs
-          path: build.log
+          path: "*.log"
