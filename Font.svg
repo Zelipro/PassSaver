@@ -1,0 +1,61 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976D2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC107;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8F00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" blur="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- Shield background -->
+  <path d="M100 40 L130 55 L130 95 Q130 115 100 130 Q70 115 70 95 L70 55 Z" 
+        fill="url(#shieldGradient)" opacity="0.9"/>
+  
+  <!-- Key body -->
+  <rect x="80" y="85" width="40" height="8" rx="4" fill="url(#keyGradient)"/>
+  
+  <!-- Key head (circle) -->
+  <circle cx="85" cy="89" r="12" fill="none" stroke="url(#keyGradient)" stroke-width="4"/>
+  
+  <!-- Key teeth -->
+  <rect x="120" y="87" width="6" height="4" fill="url(#keyGradient)"/>
+  <rect x="115" y="85" width="4" height="6" fill="url(#keyGradient)"/>
+  <rect x="125" y="89" width="4" height="4" fill="url(#keyGradient)"/>
+  
+  <!-- Password dots/asterisks representation -->
+  <circle cx="75" cy="110" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="90" cy="110" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="105" cy="110" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="120" cy="110" r="3" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Lock icon integrated -->
+  <rect x="95" y="120" width="10" height="12" rx="2" fill="#FFFFFF" opacity="0.9"/>
+  <path d="M95 120 Q100 115 105 120" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Subtle tech pattern -->
+  <g opacity="0.2">
+    <circle cx="60" cy="60" r="2" fill="#FFFFFF"/>
+    <circle cx="140" cy="60" r="2" fill="#FFFFFF"/>
+    <circle cx="60" cy="140" r="2" fill="#FFFFFF"/>
+    <circle cx="140" cy="140" r="2" fill="#FFFFFF"/>
+    <line x1="60" y1="60" x2="140" y2="60" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="60" y1="140" x2="140" y2="140" stroke="#FFFFFF" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Highlight for 3D effect -->
+  <path d="M100 10 A90 90 0 0 1 170 65" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+</svg>
