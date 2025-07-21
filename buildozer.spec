@@ -28,6 +28,3 @@ android.archs = arm64-v8a, armeabi-v7a
 orientation = all
 android.orientation = all
 android.orientations = landscape,portrait,portrait-reverse,landscape-reverse
-
-android.gradle_dependencies = 
-android.add_compile_options = sourceCompatibility JavaVersion.VERSION_1_8, targetCompatibility JavaVersion.VERSION_1_8
