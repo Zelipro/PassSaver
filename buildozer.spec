@@ -3,7 +3,7 @@ title = PassSaver
 package.name = passaver
 package.domain = org.example
 
-version = 1.3
+version = 1.4
 requirements = python3,kivy,kivymd,pillow
 
 source.dir = .
@@ -20,8 +20,6 @@ log_level = 2
 [android]
 api = 34
 minapi = 21
-ndk = 25b
-sdk = 34
 android.archs = arm64-v8a, armeabi-v7a
 
 # Configuration pour permettre toutes les orientations
