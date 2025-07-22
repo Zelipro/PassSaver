@@ -10,9 +10,6 @@ version = 1.5
 requirements = python3,kivy,kivymd,sqlite3,pillow
 icon.filename = %(source.dir)s/Font.png
 
-# Configuration du clavier - VERSION SIMPLIFIÉE
-android.add_src = .
-android.windowSoftInputMode = adjustResize
 
 [buildozer]
 log_level = 2
