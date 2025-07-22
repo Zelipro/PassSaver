@@ -3,16 +3,12 @@ title = PassSaver
 package.name = passaver
 package.domain = org.example
 
-version = 1.4
-requirements = python3,kivy,kivymd,pillow
-
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,txt,jpeg,db,svg
 source.include_patterns = Pages/*,*.db,*.jpeg,*.jpg,*.png,*.svg
-
-# Configuration du clavier - VERSION SIMPLIFIÉE
-android.add_src = .
-android.windowSoftInputMode = adjustResize|stateHidden
+version = 1.5
+requirements = python3,kivy,kivymd,sqlite3,pillow
+icon.filename = %(source.dir)s/Font.svg
 
 [buildozer]
 log_level = 2
@@ -20,9 +16,8 @@ log_level = 2
 [android]
 api = 34
 minapi = 21
-android.archs = arm64-v8a, armeabi-v7a
-
-# Configuration pour permettre toutes les orientations
+ndk = 25b
+sdk = 34
+android.archs = arm64-v8a , armeabi-v7a  # Start with one arch to simplify
 orientation = all
 android.orientation = all
-android.orientations = landscape,portrait,portrait-reverse,landscape-reverse
