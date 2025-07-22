@@ -8,11 +8,11 @@ source.include_exts = py,png,jpg,kv,atlas,txt,jpeg,db,svg
 source.include_patterns = Pages/*,*.db,*.jpeg,*.jpg,*.png,*.svg
 version = 1.5
 requirements = python3,kivy,kivymd,sqlite3,pillow
-icon.filename = %(source.dir)s/Font.svg
+icon.filename = %(source.dir)s/Font.png
 
 # Configuration du clavier - VERSION SIMPLIFIÉE
 android.add_src = .
-android.windowSoftInputMode = adjustResize|stateHidden
+android.windowSoftInputMode = adjustResize
 
 [buildozer]
 log_level = 2
